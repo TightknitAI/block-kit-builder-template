@@ -19,11 +19,11 @@
     "install-app": "bash scripts/install-app.sh"
   },
   "dependencies": {
-    "block-kit-builder": "file:../block-kit-builder",
+    "@tightknitai/block-kit-builder": "^0.1.0-alpha.0",
+    "@tightknitai/slack-block-kit-validator": "^0.1.0-alpha.0",
     "hono": "^4.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "slack-block-kit-validator": "file:../slack-block-kit-validator",
     "slack-hono": "file:../slack-hono",
     "slack-web-api-client": "^1.1.11"
   },

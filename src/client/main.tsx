@@ -1,4 +1,4 @@
-import "block-kit-builder/styles.css";
+import "@tightknitai/block-kit-builder/styles.css";
 import "./styles.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";

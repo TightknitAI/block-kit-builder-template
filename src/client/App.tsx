@@ -1,4 +1,4 @@
-import { BlockKitBuilder } from "block-kit-builder";
+import { BlockKitBuilder } from "@tightknitai/block-kit-builder";
 
 /**
  * Sole screen: hands the builder three thin fetch wrappers that hit the

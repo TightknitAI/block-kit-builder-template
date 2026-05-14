@@ -1,7 +1,7 @@
 import { Hono, type Context } from "hono";
 import { SlackHonoApp } from "slack-hono";
 import { SlackAPIClient } from "slack-web-api-client";
-import { validateBlockKit } from "slack-block-kit-validator";
+import { validateBlockKit } from "@tightknitai/slack-block-kit-validator";
 import {
   exchangeOAuthCode,
   generateOAuthState,
