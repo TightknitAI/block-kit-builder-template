@@ -1,0 +1,91 @@
+/*
+ * Minimal styling for the template's app shell. The builder ships its
+ * own stylesheet; this file only handles the surrounding chrome.
+ *
+ * The builder's CSS uses shadcn-style design tokens (--background,
+ * --primary, --border, etc). We provide a light-theme palette here so
+ * the builder renders against sensible defaults out of the box. A
+ * consuming app would normally already define these as part of its
+ * own theming system.
+ */
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 10% 3.9%;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__header {
+  padding: 1.5rem 2rem 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.app__header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.app__header p {
+  margin: 0 0 1rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.app__header a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.app__main {
+  flex: 1;
+  padding: 1rem 2rem 2rem;
+}

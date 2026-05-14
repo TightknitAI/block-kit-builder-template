@@ -1,0 +1,41 @@
+{
+  "name": "block-kit-builder-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Template app — Slack Block Kit Builder UI on Cloudflare Workers, sending messages via slack-hono.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "dev:tunnel": "vite dev & cloudflared tunnel --config cloudflared.yml run & wait",
+    "build": "vite build",
+    "deploy": "wrangler deploy",
+    "logs": "wrangler tail",
+    "typecheck": "tsc --noEmit",
+    "setup:kv": "wrangler kv namespace create SLACK_INSTALLATIONS && wrangler kv namespace create SLACK_USER_INSTALLATIONS && wrangler kv namespace create SLACK_OAUTH_STATE",
+    "setup:manifest": "bash scripts/setup-manifest.sh",
+    "manifest:copy": "bash scripts/copy-manifest.sh",
+    "setup:tunnel": "bash scripts/setup-tunnel.sh",
+    "setup:secrets": "bash scripts/setup-secrets.sh",
+    "install-app": "bash scripts/install-app.sh"
+  },
+  "dependencies": {
+    "block-kit-builder": "file:../block-kit-builder",
+    "hono": "^4.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "slack-block-kit-validator": "file:../slack-block-kit-validator",
+    "slack-hono": "file:../slack-hono",
+    "slack-web-api-client": "^1.1.11"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.30.1",
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.9.0",
+    "vite": "^8.0.2",
+    "wrangler": "^4.0.0"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

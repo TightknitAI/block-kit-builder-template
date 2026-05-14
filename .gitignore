@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+.slack.json
+cloudflared.yml
+.DS_Store
+*.log

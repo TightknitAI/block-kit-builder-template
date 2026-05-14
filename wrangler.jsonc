@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "block-kit-builder-template",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // KV namespaces — run: pnpm run setup:kv, then paste IDs here
+  "kv_namespaces": [
+    {
+      "binding": "SLACK_INSTALLATIONS",
+      "id": "REPLACE_WITH_INSTALLATIONS_KV_ID"
+    },
+    {
+      "binding": "SLACK_USER_INSTALLATIONS",
+      "id": "REPLACE_WITH_USER_INSTALLATIONS_KV_ID"
+    },
+    {
+      "binding": "SLACK_OAUTH_STATE",
+      "id": "REPLACE_WITH_OAUTH_STATE_KV_ID"
+    }
+  ],
+
+  // SPA assets — Vite builds the React client into dist/client/
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+
+  // Non-secret env vars. Bot scopes for chat + channels; user scopes for "send as user".
+  "vars": {
+    "SLACK_BOT_SCOPES": "chat:write,channels:read,groups:read",
+    "SLACK_USER_SCOPES": "chat:write,im:write"
+  }
+
+  // Set secrets via `pnpm run setup:secrets`:
+  //   SLACK_SIGNING_SECRET
+  //   SLACK_CLIENT_ID
+  //   SLACK_CLIENT_SECRET
+}
