@@ -6,7 +6,7 @@ This template handles Slack OAuth tokens and signing secrets, so we take vulnera
 
 **Please do not open a public GitHub issue.** Use one of the private channels below.
 
-- **GitHub Security Advisories** (preferred): open a private report at <https://github.com/TightknitAI/block-kit-builder-template/security/advisories/new>.
+- **GitHub Security Advisories** (preferred): open a private report at <https://github.com/TightknitAI/block-kitchen-template/security/advisories/new>.
 - **Email**: send details to <security@tightknit.ai>.
 
 Include enough to reproduce: affected version or commit, the route or flow, expected vs. actual behavior, and any PoC. If a fix is straightforward we may invite you to a private fork.
