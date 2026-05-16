@@ -1,11 +1,11 @@
 {
   "display_information": {
-    "name": "Block Kit Builder",
-    "description": "Compose Slack messages with a visual block kit builder."
+    "name": "Block Kitchen",
+    "description": "Compose Slack messages with a visual block kitchen."
   },
   "features": {
     "bot_user": {
-      "display_name": "Block Kit Builder",
+      "display_name": "Block Kitchen",
       "always_online": false
     }
   },

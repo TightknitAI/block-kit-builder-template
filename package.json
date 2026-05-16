@@ -1,8 +1,8 @@
 {
-  "name": "block-kit-builder-template",
+  "name": "block-kitchen-template",
   "version": "0.1.0",
   "private": true,
-  "description": "Template app — Slack Block Kit Builder UI on Cloudflare Workers, sending messages via slack-hono.",
+  "description": "Template app — Slack Block Kitchen UI on Cloudflare Workers, sending messages via slack-hono.",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -20,7 +20,7 @@
     "install-app": "bash scripts/install-app.sh"
   },
   "dependencies": {
-    "@tightknitai/block-kit-builder": "0.1.0-alpha.0",
+    "@tightknitai/block-kitchen": "0.1.0-alpha.0",
     "@tightknitai/slack-block-kit-validator": "0.1.0-alpha.0",
     "hono": "^4.12.18",
     "react": "^19.2.6",

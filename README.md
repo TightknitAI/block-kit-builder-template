@@ -1,6 +1,6 @@
-# block-kit-builder Template
+# block-kitchen Template
 
-A Vite + React SPA on Cloudflare Workers that uses [block-kit-builder](https://github.com/TightknitAI/block-kit-builder) to compose Slack messages and post them via [slack-hono](https://github.com/TightknitAI/slack-hono) + [slack-web-api-client](https://github.com/slack-edge/slack-web-api-client). Validates every send against [slack-block-kit-validator](https://github.com/TightknitAI/slack-block-kit-validator) for defense in depth.
+A Vite + React SPA on Cloudflare Workers that uses [block-kitchen](https://github.com/TightknitAI/block-kitchen) to compose Slack messages and post them via [slack-hono](https://github.com/TightknitAI/slack-hono) + [slack-web-api-client](https://github.com/slack-edge/slack-web-api-client). Validates every send against [slack-block-kit-validator](https://github.com/TightknitAI/slack-block-kit-validator) for defense in depth.
 
 ## What you get
 
@@ -131,7 +131,7 @@ pnpm run logs
 
 ```
                        ┌─────────────────────────────┐
-                       │   block-kit-builder         │  React component, all UX
+                       │   block-kitchen             │  React component, all UX
                        │   (npm package)             │
                        └──────────────┬──────────────┘
                                       │ loadChannels / loadSendAsUserStatus / onSend
@@ -153,7 +153,7 @@ The package never makes Slack API calls — the Worker does. The Worker validate
 
 ```
 src/
-  client/                — Vite React SPA (single page, mounts <BlockKitBuilder>)
+  client/                — Vite React SPA (single page, mounts <BlockKitchen>)
     main.tsx
     App.tsx
     styles.css
@@ -175,4 +175,4 @@ MIT. See [LICENSE](./LICENSE).
 
 ---
 
-Built with [block-kit-builder](https://github.com/TightknitAI/block-kit-builder), [slack-hono](https://github.com/TightknitAI/slack-hono), and [slack-block-kit-validator](https://github.com/TightknitAI/slack-block-kit-validator). Maintained by the [Tightknit](https://tightknit.ai) team.
+Built with [block-kitchen](https://github.com/TightknitAI/block-kitchen), [slack-hono](https://github.com/TightknitAI/slack-hono), and [slack-block-kit-validator](https://github.com/TightknitAI/slack-block-kit-validator). Maintained by the [Tightknit](https://tightknit.ai) team.

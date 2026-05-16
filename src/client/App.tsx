@@ -1,16 +1,16 @@
 import { useMemo, useState } from "react";
 import {
-  BlockKitBuilder,
-  type BlockKitBuilderProps,
+  BlockKitchen,
+  type BlockKitchenProps,
   type ChannelOption,
   type SendAsUserStatus,
   type SendPayload,
   type SendResult,
-} from "@tightknitai/block-kit-builder";
+} from "@tightknitai/block-kitchen";
 
 type Mode = "message" | "modal";
 
-type BuilderIO = Pick<BlockKitBuilderProps, "loadChannels" | "loadSendAsUserStatus" | "onSend">;
+type BuilderIO = Pick<BlockKitchenProps, "loadChannels" | "loadSendAsUserStatus" | "onSend">;
 
 const messageIO: BuilderIO = {
   loadChannels: async (): Promise<ChannelOption[]> => {
@@ -68,7 +68,7 @@ export function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>Block Kit Builder Template</h1>
+        <h1>Block Kitchen Template</h1>
         <p>
           Drag blocks → preview → click <strong>Send</strong>. Install at{" "}
           <a href="/slack/install">/slack/install</a> first.
@@ -100,7 +100,7 @@ export function App() {
         </div>
       </header>
       <main className="app__main">
-        <BlockKitBuilder key={mode} workspaceName="Slack" {...io} />
+        <BlockKitchen key={mode} workspaceName="Slack" {...io} />
       </main>
     </div>
   );
